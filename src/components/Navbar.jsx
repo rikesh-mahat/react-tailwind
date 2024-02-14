@@ -20,18 +20,18 @@ function Navbar() {
         {title : "Craft, Supplies & Tools" , path : "/"},
     ]
   return (
-    <header className='max-w-screen-2xl xl:px-28 px-4'>
+    <header className='max-w-screen-2xl xl:px-28 px-4 absolute top-0 right-0 left-0'>
         <nav className='flex justify-between items-center container md:py-4 pt-6 pb-3'>
         <FaSearch className='text-black w-5 h-5 cursor-pointer hidden md:block' />
         <a href="/"><img src={logo} alt="" /></a>
         {/* account and shoping section*/}
         <div className='text-lg text-black sm:flex item-center gap-4 hidden'>
-            <a href="" className='flex -items-center gap-2'>  <FaUser /> Account</a>
-            <a href="" className='flex -items-center gap-2'>  <FaShoppingBag /> Shopping</a>
+            <a href="" className='flex items-center gap-2'>  <FaUser /> Account</a>
+            <a href="" className='flex items-center gap-2'>  <FaShoppingBag /> Shopping</a>
         </div>
 
         {/* nav bar for small devices */}
-        <div>
+        <div className='md:hidden'>
             <button onClick={toggleMenu}>
                 {isMenuOpen ? <FaTimes className='w-5 h-5 text-black' /> : <FaBars className='w-5 h-5 text-black'/>}
             </button>
@@ -54,7 +54,7 @@ function Navbar() {
         {/* only mobile menu items */}
         <div>
       
-            <ul className={`bg-black text-white px-4 py-2 rounded  ${isMenuOpen ? "" : 'hidden'} ease-in-out duration-1000`}>
+            <ul className={`bg-black text-white px-4 py-2 rounded  ${isMenuOpen ? null : 'hidden'} md:hidden`}>
                 {navItems.map(({title, path}) => (
                     <li key={title} className='hover:text-orange-500'>
                         <Link to='/'>{title}</Link>

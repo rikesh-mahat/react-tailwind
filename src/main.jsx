@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/home/Home.jsx';
+import DetailPage from './pages/home/DetailPage.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,9 +19,14 @@ const router = createBrowserRouter([
       {
         path : "/",
         element : <Home />,
+      },
+      {
+        path : '/product/:id',
+        element : <DetailPage />
       }
     ]
   },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

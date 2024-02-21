@@ -3,6 +3,7 @@ import Banner from './Banner.jsx'
 import Category from './Category.jsx'
 import Products from './Products.jsx'
 import Collections from './Collections.jsx'
+import BestSellers from './BestSellers.jsx'
 function Home() {
   return (
     <div>
@@ -10,6 +11,7 @@ function Home() {
       <Category />
       <Products/>
       <Collections/>
+      <BestSellers />
     </div>
   )
 }

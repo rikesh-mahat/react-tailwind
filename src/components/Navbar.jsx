@@ -20,7 +20,7 @@ function Navbar() {
         {title : "Craft, Supplies & Tools" , path : "/"},
     ]
   return (
-    <header className='max-w-screen-2xl xl:px-28 px-4 absolute top-0 right-0 left-0'>
+    <header className='max-w-screen-2xl mx-auto xl:px-28 px-4 absolute top-0 right-0 left-0'>
         <nav className='flex justify-between items-center container md:py-4 pt-6 pb-3'>
         <FaSearch className='text-black w-5 h-5 cursor-pointer hidden md:block' />
         <a href="/"><img src={logo} alt="" /></a>

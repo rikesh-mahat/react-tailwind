@@ -32,7 +32,7 @@ function DetailPage() {
             <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 h-max'>
               <div>
                 
-                  <img src={image} alt={title} />
+                  <img src={image} alt={title} className='mx-auto'/>
                 
               </div>
 
